@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive Shopping List</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="headerText">Shopping List</h1>
+        <p class="info">Your shopping list</p>
+    </div>
+
+    <div class="input">
+        <form>
+            <select name="type" class="dropdown" aria-placeholder="type">
+                <option value="clothes"></option>
+                <option value="groceries">Groceries</option>
+                <option value="edibles">Drinks/Food</option>
+                <option value="ingredients">Ingredients</option>
+                <option value="tech">Tech</option>
+                <option value="organic">Organic</option>
+                <option value="inorganic">Inorganic</option>
+                <option value="toys">Toys</option>
+                <option value="other">Other</option>
+            </select>
+        </form>
+        <form class="getInput">
+            <input type="text" class="itemName" placeholder="Enter product... ">
+        </form>
+        <form >
+            <input type="number" class="itemQuantity" placeholder="QTY">
+        </form>
+        <form >
+            <select name="color" class="colorDropdown" aria-placeholder="color">
+                <option value="N/A">N/A</option>
+                <option value="other">Other</option>
+            </select>
+        </form>
+        
+
+
+        <button type="submit" class="button">Add to cart</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
