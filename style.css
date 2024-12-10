@@ -36,4 +36,18 @@ body {
     text-transform: uppercase; /* Bold, standout text */
 }
 
+.dropdown, .itemName, .itemQuantity, .searchInput {
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%; 
+    border: 1px solid #ddd;
+    box-sizing: border-box; 
+    margin-top: 5px;
+}
+
+.dropdown {
+    background-color: #f9f9f9; /* Light background for dropdown */
+    cursor: pointer;
+}
 
