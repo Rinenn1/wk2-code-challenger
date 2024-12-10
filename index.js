@@ -69,3 +69,20 @@ searchButton.addEventListener("click", function (event) {
         return;
     }
 
+        // Search and highlight matching items
+        items.forEach((item) => {
+            const itemName = item.getAttribute("data-name");
+            if (itemName.includes(query)) {
+                item.style.backgroundColor = "#ffeb3b"; // Highlight matching item
+            } else {
+                item.style.backgroundColor = ""; // Reset non-matching items
+            }
+        });
+});
+    
+clearItems.addEventListener('click', function(event){
+    event.preventDefault();
+    
+    list.innerHTML = "";
+})
+
