@@ -29,3 +29,32 @@ addButton.addEventListener("click", function (event) {
     li.textContent = `${type}: ${name} (Qty: ${quantity})`;
 
 
+    const markPurchasedButton = document.createElement("button");
+    markPurchasedButton.textContent = "Mark Purchased";
+    markPurchasedButton.style.marginLeft = "10px";
+
+    // Handle "Mark Purchased" functionality
+    markPurchasedButton.addEventListener("click", function () {
+        if (li.style.textDecoration === "line-through") {
+            li.style.textDecoration = ""; // Unmark as purchased
+            li.style.backgroundColor = ""; // Reset background
+        } else {
+            li.style.textDecoration = "line-through"; // Mark as purchased
+            li.style.backgroundColor = "#d4edda"; // Light green background
+        }
+    });
+
+    // Append the button to the list item
+    li.appendChild(markPurchasedButton);
+    
+
+    // Append the item to the list
+    list.appendChild(li);
+
+    // Clear inputs
+    itemName.value = "";
+    itemQuantity.value = "";
+});
+
+
+
