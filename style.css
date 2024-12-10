@@ -51,3 +51,27 @@ body {
     cursor: pointer;
 }
 
+.searchInput {
+    margin-top: 10px;
+}
+
+/* Buttons */
+.button {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%; /* Full width for better spacing */
+    border: none;
+    background-color: #0000fd;; /* Blue for primary action */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #fff; 
+    transform: scale(1.004); 
+    color: #000;
+    border-color: #000;
+    border-style: ridge;
+}
