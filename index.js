@@ -57,4 +57,15 @@ addButton.addEventListener("click", function (event) {
 });
 
 
+// Search for an item
+searchButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const query = searchInput.value.trim().toLowerCase();
+    const items = list.querySelectorAll("li");
+
+    if (!query) {
+        alert("Please enter an item to search for.");
+        return;
+    }
 
