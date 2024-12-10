@@ -27,6 +27,7 @@ addButton.addEventListener("click", function (event) {
     // Create a new list item
     const li = document.createElement("li");
     li.textContent = `${type}: ${name} (Qty: ${quantity})`;
+    li.setAttribute("data-name", name.toLowerCase());
 
 
     const markPurchasedButton = document.createElement("button");
@@ -70,14 +71,14 @@ searchButton.addEventListener("click", function (event) {
     }
 
         // Search and highlight matching items
-        items.forEach((item) => {
-            const itemName = item.getAttribute("data-name");
-            if (itemName.includes(query)) {
-                item.style.backgroundColor = "#ffeb3b"; // Highlight matching item
-            } else {
-                item.style.backgroundColor = ""; // Reset non-matching items
-            }
-        });
+    items.forEach((item) => {
+        const itemName = item.getAttribute("data-name");
+        if (itemName.includes(query)) {
+            item.style.backgroundColor = "#ffeb3b"; // Highlight matching item
+        } else {
+            item.style.backgroundColor = ""; // Reset non-matching items
+        }
+    });
 });
     
 clearItems.addEventListener('click', function(event){
